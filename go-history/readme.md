@@ -1,6 +1,6 @@
-# Go(Golang) là gì , nguồn gốc và sự ra đời của Go )
+# Go(Golang) là gì , nguồn gốc và sự ra đời của Go
 
-![](images/golang.png)
+<img src="images/golang.png" style="display: block; margin-left: auto;margin-right: auto;"/>
 
 ## Go(Golang) là gì 
     The Go programming language is an open source project to make programmers more productive.
@@ -12,7 +12,7 @@
 ### Lý do: 
 * Tận dụng được sức mạnh phần cứng nhiều lõi của phần cứng thế hệ mới
 
-![](images/g_history.png)
+<img src="images/g_history.png" style="display: block; margin-left: auto;margin-right: auto;"/>
 
 * Một số lập trình viên những người viết những thứ can thiệp rất sâu vào hệ thông phàn nàn về sự phức tạp với các tính chất của C++ (https://en.wikipedia.org/wiki/Criticism_of_C%2B%2B) , họ mong  
 muốn có 1 cái gì đó đơn giản hơn, nhưng vẫn giữ được các tính chất của C++ và hiệu năng tương 
@@ -21,8 +21,7 @@ muốn có 1 cái gì đó đơn giản hơn, nhưng vẫn giữ được các t
 --> Go ( hay còn gọi là Golang) ra đời để giải quyết các nhu cầu trên
 
 ## Lịch sử ra đời của Go
-
-![](images/authors.webp)
+<img src="images/authors.webp" style="display: block; margin-left: auto;margin-right: auto;"/>
 
     - 2007 - những ý tưởng đầu tiên về Go đã được phác thảo trên whiteboard tại Google bởi bộ 3: Robert Griesemer, Rob Pike, Ken Thompson song song với công việc chính của họ tại Google
 
@@ -31,7 +30,7 @@ muốn có 1 cái gì đó đơn giản hơn, nhưng vẫn giữ được các t
 
     - Cuối năm 2008 Russ Cox tham gia vào dự án và trở thành người phát triển chính của dự án trong việc hiện thực các các nguyên mẫu 
 
-![](images/1.png)
+<img src="images/1.png" style="display: block; margin-left: auto;margin-right: auto;"/>
 
     - Cuối 2009: Công bố dự án mã nguồn mở Go
     - 2012: Phát hành phiên bản 1.0 đầu tiên , phiên bản đủ ổn định để sử dụng trên môi trường production 
@@ -84,15 +83,16 @@ func main() {
 
 Thư mục chứa các file trước khi tiến hành biên dịch
 
-![](images/5.png)
+<img src="images/5.png" style="display: block; margin-left: auto;margin-right: auto;"/>
 
 tiến hành build file thực thi bằng câu lệnh: <i>go build main.go</i>
-![](images/6.png)
+
+<img src="images/6.png" style="display: block; margin-left: auto;margin-right: auto;"/>
 
 main* vừa xuất hiện chính là file thực thi 
 Chạy file thực thi vừa biên dịch ra 
 
-![](images/7.png)
+<img src="images/7.png" style="display: block; margin-left: auto;margin-right: auto;"/>
 
 
 ### Static typing
@@ -136,7 +136,7 @@ func main() {
 ```
 biên dịch lại và chạy lại
 
-![](images/3.png)
+<img src="images/3.png" style="display: block; margin-left: auto;margin-right: auto;"/>
 
 Ngày nay ngôn ngữ Go được sử dụng bởi hàng triệu lập trình viên trên toàn thế giới
 và những người sử dụng Go được gọi là gopher
