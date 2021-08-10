@@ -14,6 +14,7 @@
 * Tận dụng được sức mạnh phần cứng nhiều lõi của phần cứng thế hệ mới
 
 <img src="images/g_history.png" style="display: block; margin-left: auto;margin-right: auto;"/>
+<br>
 
 * Một số lập trình viên những người viết những thứ can thiệp rất sâu vào hệ thông phàn nàn về sự phức tạp với các tính chất của C++ (https://en.wikipedia.org/wiki/Criticism_of_C%2B%2B) , họ mong  
 muốn có 1 cái gì đó đơn giản hơn, nhưng vẫn giữ được các tính chất của C++ và hiệu năng tương 
@@ -28,7 +29,6 @@ muốn có 1 cái gì đó đơn giản hơn, nhưng vẫn giữ được các t
 
 - Tháng 1 năm 2008 Ken bắt đầu làm việc với trình biên dịch để phác thảo ý tưởng, và cuối cùng Ken đã chọn C compiler đê làm compiler chính cho Go(gccgo)
 - Sau đó họ bắt đầu làm việc toàn thời gian cho dự án Go và phát triển go runtime và compiler 
-
 - Cuối năm 2008 <strong style="color: white">Russ Cox</strong> tham gia vào dự án và trở thành người phát triển chính của dự án trong việc hiện thực các các nguyên mẫu 
 
 <img src="images/1.png" style="display: block; margin-left: auto;margin-right: auto;"/>
@@ -38,7 +38,7 @@ muốn có 1 cái gì đó đơn giản hơn, nhưng vẫn giữ được các t
 - 2012: Phát hành phiên bản 1.0 đầu tiên , phiên bản đủ ổn định để sử dụng trên môi trường production 
 - 2013: đánh dấu 2 cột mốc lớn trong cùng 1 năm
     - Tháng 5:  phát hành phiên bản 1.1 - Hỗ trợ kiến trúc 64bit
-    - Tháng 12: phát hành phiên bản 1.2: s
+    - Tháng 12: phát hành phiên bản 1.2:
         - Go runtime scheduler có thể invoked ngay khi gọi function 
         - Cho phép cấu hình thay đổi tối đa số lượng thread của một chương trình( mặc định là 10,000)
         - Kích thước bộ nhớ tối thiểu khi 1 goroutine tạo ra được nâng từ 4KB thành 8KB
@@ -50,12 +50,12 @@ muốn có 1 cái gì đó đơn giản hơn, nhưng vẫn giữ được các t
     - Hỗ trợ phiên bản pepper mới nhất ( 1.5 yêu cầu pepper-41)
 
 - 2017: 
-    - Tháng 2 - Go 1.8 , cải thiện hiệu năng garbage collector tốc độ collector dưới 100 microsecond 
-    - Tháng 8 - Go 1.9 , 1 cải tiến lớn với việc go giờ đây hỗ trợ xử lý song song tận dụng sức mạnh đa nhân của vi xử lý
+    - Tháng 2 - Go 1.8 , cải thiện hiệu năng garbage collector tốc độ collector dưới 100 microsecond - nhanh gấp gần 100 lần 
+    - Tháng 8 - Go 1.9 , có 1 cải tiến lớn với việc go giờ đây hỗ trợ xử lý song song tận dụng sức mạnh đa nhân của vi xử lý, làm cho go giờ đây càng nhanh hơn nữa
 - 2018 Go 1.11 
     - Hỗ trợ Webassembly 
     - Khái niệm modules thay thế cho GOPATH để quản lý và cài đặt các thư viện sử dụng trong sự án
-    - Ngững hỗ trợ Windows XP , Windows Vista
+    - Ngừng hỗ trợ Windows XP , Windows Vista
 
 - 2019 Go 1.12.1 Hỗ trợ Windows trên bộ xử lý arm
 - 2020  
@@ -64,6 +64,7 @@ muốn có 1 cái gì đó đơn giản hơn, nhưng vẫn giữ được các t
 - 2021 Go 1.16
     - Hỗ trợ mặc định module-aware khi tạo 1 dự án go
     - Hỗ trợ kiến trúc 64 bit vi xử lý arm trên IOS
+- Ý tưởng về phiên bản "Go 2" với bản thiết kế nháp về  2 feature là hỗ trợ kiểu generics và error handling được đề xuất bởi cộng đồng đã xuất hiện từ cuối năm 2018 nhưng cho đến tháng 8 2021 vẫn chưa xuất hiện(1.16.7)
 
 ## Các đăc điểm chính của Go
 <i><strong style="color: #329ea8;"> Compiler programing language </strong></i>
@@ -93,7 +94,7 @@ tiến hành build file thực thi bằng câu lệnh: <i>go build main.go</i>
 <img src="images/6.png" style="display: block; margin-left: auto;margin-right: auto;"/>
 
 main* vừa xuất hiện chính là file thực thi 
-Chạy file thực thi vừa biên dịch ra 
+Chạy file thực thi vừa biên dịch ra <i>go run main</i>
 
 ![](images/7.png)
 
