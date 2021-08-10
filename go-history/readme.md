@@ -1,6 +1,6 @@
 # Go(Golang) là gì , nguồn gốc và sự ra đời của Go )
 
-![](images/1.png)
+![](images/golang.png)
 
 ## Go(Golang) là gì 
     The Go programming language is an open source project to make programmers more productive.
@@ -20,13 +20,18 @@ muốn có 1 cái gì đó đơn giản hơn, nhưng vẫn giữ được các t
 
 --> Go ( hay còn gọi là Golang) ra đời để giải quyết các nhu cầu trên
 
-### Những cột mốc trong quá trình phát triển của Go:
+## Lịch sử ra đời của Go
 
-    - 2007 - những ý tưởng đầu tiên về Go đã được phác thảo trên whiteboard tại Google bởi bộ 3: Robert Griesemer, Rob Pike, Ken Thompson song song với công việc chính của họ tại Google 
+![](images/authors.webp)
+
+    - 2007 - những ý tưởng đầu tiên về Go đã được phác thảo trên whiteboard tại Google bởi bộ 3: Robert Griesemer, Rob Pike, Ken Thompson song song với công việc chính của họ tại Google
+
     - Tháng 1 năm 2008 Ken bắt đầu làm việc với trình biên dịch để phác thảo ý tưởng, và cuối cùng Ken đã chọn C compiler đê làm compiler chính cho Go(gccgo)
     - Sau đó họ bắt đầu làm việc toàn thời gian cho dự án Go và phát triển go runtime và compiler 
-    - Cuối năm 2008 Russ Cox tham gia vào dự án và trở thành
-    người phát triển chính của dự án trong việc hiện thực các các nguyên mẫu 
+
+    - Cuối năm 2008 Russ Cox tham gia vào dự án và trở thành người phát triển chính của dự án trong việc hiện thực các các nguyên mẫu 
+
+![](images/1.png)
 
     - Cuối 2009: Công bố dự án mã nguồn mở Go
     - 2012: Phát hành phiên bản 1.0 đầu tiên , phiên bản đủ ổn định để sử dụng trên môi trường production 
@@ -140,3 +145,4 @@ và những người sử dụng Go được gọi là gopher
 Nguồn: 
  1. https://en.wikipedia.org/wiki/Go_(programming_language)
  2. https://golang.org/doc/faq
+ 3. https://codespacelab.com/what-is-golang-all-about/
