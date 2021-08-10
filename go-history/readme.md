@@ -3,8 +3,9 @@
 <img src="images/golang.png" style="display: block; margin-left: auto;margin-right: auto;"/>
 
 ## Go(Golang) là gì 
-    The Go programming language is an open source project to make programmers more productive.
-    ->  là một ngôn ngữ lập trình mã nguồn mở giúp các lập trình viên làm việc hiệu quả hơn, nhanh hơn,  giảm đi độ phức tạp trong lập trình phần mềm trong khi vẫn giữ được hiệu năng ấn tượng.
+- The Go programming language is an open source project to make programmers more productive.
+
+    ==> là một ngôn ngữ lập trình mã nguồn mở giúp các lập trình viên làm việc hiệu quả hơn, nhanh hơn,  giảm đi độ phức tạp trong lập trình phần mềm trong khi vẫn giữ được hiệu năng ấn tượng.
 
 
 
@@ -23,51 +24,53 @@ muốn có 1 cái gì đó đơn giản hơn, nhưng vẫn giữ được các t
 ## Lịch sử ra đời của Go
 <img src="images/authors.webp" style="display: block; margin-left: auto;margin-right: auto;"/>
 
-    - 2007 - những ý tưởng đầu tiên về Go đã được phác thảo trên whiteboard tại Google bởi bộ 3: Robert Griesemer, Rob Pike, Ken Thompson song song với công việc chính của họ tại Google
+- 2007 - những ý tưởng đầu tiên về Go đã được phác thảo trên whiteboard tại Google bởi bộ 3: <strong style="color: white">Robert Griesemer, Rob Pike, Ken Thompson</strong> song song với công việc chính của họ tại Google
 
-    - Tháng 1 năm 2008 Ken bắt đầu làm việc với trình biên dịch để phác thảo ý tưởng, và cuối cùng Ken đã chọn C compiler đê làm compiler chính cho Go(gccgo)
-    - Sau đó họ bắt đầu làm việc toàn thời gian cho dự án Go và phát triển go runtime và compiler 
+- Tháng 1 năm 2008 Ken bắt đầu làm việc với trình biên dịch để phác thảo ý tưởng, và cuối cùng Ken đã chọn C compiler đê làm compiler chính cho Go(gccgo)
+- Sau đó họ bắt đầu làm việc toàn thời gian cho dự án Go và phát triển go runtime và compiler 
 
-    - Cuối năm 2008 Russ Cox tham gia vào dự án và trở thành người phát triển chính của dự án trong việc hiện thực các các nguyên mẫu 
+- Cuối năm 2008 <strong style="color: white">Russ Cox</strong> tham gia vào dự án và trở thành người phát triển chính của dự án trong việc hiện thực các các nguyên mẫu 
 
 <img src="images/1.png" style="display: block; margin-left: auto;margin-right: auto;"/>
 
-    - Cuối 2009: Công bố dự án mã nguồn mở Go
-    - 2012: Phát hành phiên bản 1.0 đầu tiên , phiên bản đủ ổn định để sử dụng trên môi trường production 
-    - 2013: đánh dấu 2 cột mốc lớn trong cùng 1 năm
-        #Tháng 5:  phát hành phiên bản 1.1 - Hỗ trợ kiến trúc 64bit
-        #Tháng 12: phát hành phiên bản 1.2: s
-            - Go runtime scheduler có thể invoked ngay khi gọi function 
-            - Cho phép cấu hình thay đổi tối đa số lượng thread của một chương trình( mặc định là 10,000)
-            - Kích thước bộ nhớ tối thiểu khi 1 goroutine tạo ra được nâng từ 4KB thành 8KB
-    - 2015 Go 1.5 
-        # Go chính thức có compiler và runtime của riêng mình cgo( trước đây dùng của gcc của C)
-        # garbage collector mới với hiệu năng tăng gấp nhiều lần (under 10 miniseconds)
-    - 2016 Go 1.6 
-        # Hỗ trợ thêm nhiều tập lệnh 64-bit x86 systems
-        # Hỗ trợ phiên bản pepper mới nhất ( 1.5 yêu cầu pepper-41)
+- Cuối 2009: Chuyện gì đến cũng phải đến, nhóm phát triển go công bố dự án mã nguồn mở Go ra cộng đồng
 
-    - 2017: 
-        # Tháng 2 - Go 1.8 , cải thiện hiệu năng garbage collector tốc độ collector dưới 100 microsecond 
-        # Tháng 8 - Go 1.9 , 1 cải tiến lớn với việc go giờ đây hỗ trợ xử lý song song tận dụng sức mạnh đa nhân của vi xử lý
-    - 2018 Go 1.11 
-        # Hỗ trợ Webassembly 
-        # Khái niệm modules thay thế cho GOPATH để quản lý và cài đặt các thư viện sử dụng trong sự án
-        # Ngững hỗ trợ Windows XP , Windows Vista
+- 2012: Phát hành phiên bản 1.0 đầu tiên , phiên bản đủ ổn định để sử dụng trên môi trường production 
+- 2013: đánh dấu 2 cột mốc lớn trong cùng 1 năm
+    - Tháng 5:  phát hành phiên bản 1.1 - Hỗ trợ kiến trúc 64bit
+    - Tháng 12: phát hành phiên bản 1.2: s
+        - Go runtime scheduler có thể invoked ngay khi gọi function 
+        - Cho phép cấu hình thay đổi tối đa số lượng thread của một chương trình( mặc định là 10,000)
+        - Kích thước bộ nhớ tối thiểu khi 1 goroutine tạo ra được nâng từ 4KB thành 8KB
+- 2015 Go 1.5 
+    - Go chính thức có compiler và runtime của riêng mình cgo( trước đây dùng của gcc của C)
+    - garbage collector mới với hiệu năng tăng gấp nhiều lần (under 10 miniseconds)
+- 2016 Go 1.6 
+    - Hỗ trợ thêm nhiều tập lệnh 64-bit x86 systems
+    - Hỗ trợ phiên bản pepper mới nhất ( 1.5 yêu cầu pepper-41)
 
-    - 2019 Go 1.12.1 Hỗ trợ Windows trên bộ xử lý arm
-    - 2020  
-        # Go 1.14 go module có thể sử dụng go command trên production 
-        # Go 1.15 không cho phép access vào các method non-exported(viết thường tên) từ bên ngoài
-    - 2021 Go 1.16
-        # Hỗ trợ mặc định module-aware khi tạo 1 dự án go
-        # Hỗ trợ kiến trúc 64 bit vi xử lý arm trên IOS
+- 2017: 
+    - Tháng 2 - Go 1.8 , cải thiện hiệu năng garbage collector tốc độ collector dưới 100 microsecond 
+    - Tháng 8 - Go 1.9 , 1 cải tiến lớn với việc go giờ đây hỗ trợ xử lý song song tận dụng sức mạnh đa nhân của vi xử lý
+- 2018 Go 1.11 
+    - Hỗ trợ Webassembly 
+    - Khái niệm modules thay thế cho GOPATH để quản lý và cài đặt các thư viện sử dụng trong sự án
+    - Ngững hỗ trợ Windows XP , Windows Vista
+
+- 2019 Go 1.12.1 Hỗ trợ Windows trên bộ xử lý arm
+- 2020  
+    - Go 1.14 go module có thể sử dụng go command trên production 
+    - Go 1.15 không cho phép access vào các method non-exported(viết thường tên) từ bên ngoài
+- 2021 Go 1.16
+    - Hỗ trợ mặc định module-aware khi tạo 1 dự án go
+    - Hỗ trợ kiến trúc 64 bit vi xử lý arm trên IOS
 
 ## Các đăc điểm chính của Go
-### Compiler programing language
-    - Biên dịch ra file thực thi 
+<i><strong style="color: #329ea8;"> Compiler programing language </strong></i>
+- Biên dịch ra file thực thi(execute file ) hay còn gọi là file exe
 
 Ví dụ: 
+
 chúng ta có đoạn code in ra số 10 như sau: 
 ``` Go
 package main
@@ -92,12 +95,15 @@ tiến hành build file thực thi bằng câu lệnh: <i>go build main.go</i>
 main* vừa xuất hiện chính là file thực thi 
 Chạy file thực thi vừa biên dịch ra 
 
-<img src="images/7.png" style="display: block; margin-left: auto;margin-right: auto;"/>
+![](images/7.png)
 
 
-### Static typing
-    - kiểu dữ liệu trong Go là cố định kể từ khi khai báo lần đầu tiên và không thể thay đổi cũng như gán lại kiểu dữ liệu khác trong một chương trình Go cho cùng 1 biến
-    Ví dụ : 
+<i><strong style="color: #329ea8;">Static typing</strong></i>
+
+- kiểu dữ liệu trong Go là cố định kể từ khi khai báo lần đầu tiên và không thể thay đổi cũng như gán lại kiểu dữ liệu khác trong một chương trình Go cho cùng 1 biến
+
+Ví dụ:
+
 ``` Go
 package main
 
@@ -137,6 +143,8 @@ func main() {
 biên dịch lại và chạy lại
 
 <img src="images/3.png" style="display: block; margin-left: auto;margin-right: auto;"/>
+
+<br>
 
 Ngày nay ngôn ngữ Go được sử dụng bởi hàng triệu lập trình viên trên toàn thế giới
 và những người sử dụng Go được gọi là gopher
