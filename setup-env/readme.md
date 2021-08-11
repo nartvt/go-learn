@@ -86,9 +86,8 @@ Kiếm tra lại phiên bản Go đã cài đặt trên máy bằng lệnh
 
     go version
 
-Máy tính đã xác nhận phiên bản vừa cài đặt trên máy 
-<img src="images/9.png"/>
-<br>
+Máy tính đã xác nhận phiên bản vừa cài đặt trên máy <br>
+<img src="images/9.png"/> <br>
 
 # Cài đặt IDE để bắt đầu chinh chiến với Go
 
