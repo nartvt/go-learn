@@ -238,10 +238,11 @@ Chọn Apply -> OK <br>
 
 <img src="images/25.png" /> <br>
 
-Click vào nút Run
+Click vào nút Run <br>
 <img src="images/26.png"/> <br>
 
-Và cái kết<br> 
+Và cái kết<br>
+
 <img src="images/27.png"/><br>
 
 Nguồn: 
