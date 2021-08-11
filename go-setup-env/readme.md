@@ -131,7 +131,7 @@ nên ta có:
     Tiến hành test và chạy thử chương trình Go đầu tiên
 
     Plugin đã có tác dụng và phát hiện và đề xuất được những từ khóa trong Go khi gõ
-<img src="images/15.png" style="display: block; margin-left: auto;margin-right: auto;"/>
+<img src="images/15.png" />
 <br>
 
     Chạy thử 
@@ -209,7 +209,7 @@ GOROOT: folder root cài đặt Go, mặc định sẽ tự phát hiện nếu t
 
 Sau khi bấm create, project đã được tạo với go module (go.mod) đã được tạo sẵn (kể từ phiên bản 1.16 - https://github.com/nartvt/go-learn/tree/master/go-history)
 
-<img src="images/22.png" style="display: block; margin-left: auto;margin-right: auto;"/>
+<img src="images/22.png"/>
 <br>
 
 Chuột phải vào project chọn New -> go file , đặt tên, ở đây là main.go
@@ -232,11 +232,12 @@ Chọn Apply -> OK
 Click vào nút Run
 
 Chọn Apply -> OK 
-<img src="images/26.png" style="display: block; margin-left: auto;margin-right: auto;"/>
+<img src="images/26.png"/>
 <br>
 
 Và cái kết 
-<img src="images/27.png" style="display: block; margin-left: auto;margin-right: auto;"/>
+
+<img src="images/27.png"/>
 <br>
 
 Nguồn: 
