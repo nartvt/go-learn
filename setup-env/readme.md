@@ -93,6 +93,7 @@ Máy tính đã xác nhận phiên bản vừa cài đặt trên máy
 # Cài đặt IDE để bắt đầu chinh chiến với Go
 
 ## Visual studio Code - IDE đa năng cho mọi ngôn ngữ từ Microsoft và miễn phí
+Giá: miễn phí
 
 Tải file cài đặt tại: https://code.visualstudio.com/
 
@@ -140,7 +141,7 @@ nên ta có:
 <br>
 
 ## Goland - sản phẩm xịn sò của team Intelliji 
-Giá: $$$
+Giá: 199$
 Tuy nhiên có thể dùng thử 30 ngày trước khi quyết định xuống tay mua 
 
 Tải file cài đặt tại: https://www.jetbrains.com/go/
@@ -200,8 +201,17 @@ Tại Applications center của Ubuntu, chúng ta đã có Goland , kéo thả n
 <img src="images/19.png" style="display: block; margin-left: auto;margin-right: auto;"/>
 <br>
 
+Chọn Evaluate for free, để kích hoạt dùng thử 30 ngày
+
+<img src="images/28.png" />
+<br>
+
+<img src="images/29.png" />
+<br>
+<br>
+
 Mở Goland -> File -> New -> Project
-Location: nơi sẽ lưu project sau khi được tạo
+Location: nơi sẽ lưu project sau khi được tạo<br>
 GOROOT: folder root cài đặt Go, mặc định sẽ tự phát hiện nếu trước đó trong hệ thông đã cài sẵn Go
 
 <img src="images/21.png" style="display: block; margin-left: auto;margin-right: auto;"/>
@@ -222,23 +232,17 @@ Thêm 1 đoạn code đơn giản là in ra 1 dòng "Hello World" quen thuộc c
 Trên góc phải của Goland, click vào <strong>Add Configuration</strong>
 > chọn dấu + ở bên góc trên trái của màn hình hiện ra, chọn Go build trong danh sách -> apl 
 
+Chọn Apply -> OK <br>
 <img src="images/24.png" />
 <br>
 
-Chọn Apply -> OK 
-
-<img src="images/25.png" />
-<br>
+<img src="images/25.png" /> <br>
 
 Click vào nút Run
+<img src="images/26.png"/> <br>
 
-<img src="images/26.png"/>
-<br>
-
-Và cái kết 
-
-<img src="images/27.png"/>
-<br>
+Và cái kết<br> 
+<img src="images/27.png"/><br>
 
 Nguồn: 
 1. https://golang.org/doc/install#tarball_non_standard
