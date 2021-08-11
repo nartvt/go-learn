@@ -222,16 +222,16 @@ Thêm 1 đoạn code đơn giản là in ra 1 dòng "Hello World" quen thuộc c
 Trên góc phải của Goland, click vào <strong>Add Configuration</strong>
 > chọn dấu + ở bên góc trên trái của màn hình hiện ra, chọn Go build trong danh sách -> apl 
 
-<img src="images/24.png" style="display: block; margin-left: auto;margin-right: auto;"/>
+<img src="images/24.png" />
 <br>
 
 Chọn Apply -> OK 
-<img src="images/25.png" style="display: block; margin-left: auto;margin-right: auto;"/>
+
+<img src="images/25.png" />
 <br>
 
 Click vào nút Run
 
-Chọn Apply -> OK 
 <img src="images/26.png"/>
 <br>
 
