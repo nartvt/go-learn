@@ -42,7 +42,7 @@ func main() {
     //  giá trị trả ra một con trỏ là giá trị của vùng nhớ được trỏ,
     //  mặc định là &{0}
     fmt.Println(user)  //  {0}
-	fmt.Println(user2) //  &{0}
+    fmt.Println(user2) //  &{0}
 }
 ```
 ## Với kiểu dữ liệu tập hợp(arrays, slice)
