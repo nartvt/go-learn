@@ -67,9 +67,11 @@ muốn có 1 cái gì đó đơn giản hơn, nhưng vẫn giữ được các t
 - Ý tưởng về phiên bản "Go 2" với bản thiết kế nháp về  2 feature là hỗ trợ kiểu generics và error handling được đề xuất bởi cộng đồng đã xuất hiện từ cuối năm 2018 nhưng cho đến tháng 8 2021 vẫn chưa xuất hiện(1.16.7)
 
 ## Các đăc điểm chính của Go
-<i><strong style="color: #329ea8;"> Compiler programing language </strong></i>
-- Biên dịch ra file thực thi(execute file ) hay còn gọi là file exe
-
+<i>
+    <strong style="color: #329ea8;">
+        Compiler programing language
+    </strong>
+</i> - Biên dịch ra file thực thi(execute file ) hay còn gọi là file exe<br>
 Ví dụ: 
 
 chúng ta có đoạn code in ra số 10 như sau: 
@@ -99,7 +101,9 @@ Chạy file thực thi vừa biên dịch ra <i>go run main</i>
 ![](images/7.png)
 
 
-<i><strong style="color: #329ea8;">Static typing</strong></i>
+<i>
+    <strong style="color: #329ea8;">Static typing</strong>
+</i>
 
 - kiểu dữ liệu trong Go là cố định kể từ khi khai báo lần đầu tiên và không thể thay đổi cũng như gán lại kiểu dữ liệu khác trong một chương trình Go cho cùng 1 biến
 
