@@ -39,9 +39,10 @@ func main() {
 	var user User // khai báo và cấp phát bộ nhớ với kiểu dữ liệu là User,
     // là 1 giá trị(mặc định {0})
 	user2:=new(User) // khai báo và cấp phát bộ nhớ với kiểu dữ liệu là User ,
-    //  giá trị trả ra một con trỏ là giá trị của vùng nhớ được trỏ, mặc định là &{0}
-    fmt.Println(user)
-	fmt.Println(user2)
+    //  giá trị trả ra một con trỏ là giá trị của vùng nhớ được trỏ,
+    //  mặc định là &{0}
+    fmt.Println(user)  //  {0}
+	fmt.Println(user2) //  &{0}
 }
 ```
 ## Với kiểu dữ liệu tập hợp(arrays, slice)
