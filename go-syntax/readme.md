@@ -87,7 +87,8 @@ func main() {
 	fmt.Println(interfaceTest) // -> "abcd"
 }
 ```
-Lưu ý: kiểu dữ liệu interface{} có thể đại diện cho hầu hết mọi kiểu dữ liệu trong Go, nhương ngược lại thì không 
+Lưu ý: kiểu dữ liệu interface{} có thể đại diện cho hầu hết mọi kiểu dữ liệu trong Go, nhương ngược lại thì không
+
 Xem ví dụ dưới đây: 
 ```Go
 func main() {
