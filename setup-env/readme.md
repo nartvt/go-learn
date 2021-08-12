@@ -200,7 +200,7 @@ Tại Applications center của Ubuntu, chúng ta đã có Goland , kéo thả n
 <img src="images/19.png" style="display: block; margin-left: auto;margin-right: auto;"/>
 <br>
 
-Chọn Evaluate for free, để kích hoạt dùng thử 30 ngày
+Chọn <strong>Evaluate for free</strong>, để kích hoạt dùng thử 30 ngày
 
 <img src="images/28.png" />
 <br>
@@ -209,40 +209,22 @@ Chọn Evaluate for free, để kích hoạt dùng thử 30 ngày
 <br>
 <br>
 
-Mở Goland -> File -> New -> Project
-Location: nơi sẽ lưu project sau khi được tạo<br>
-GOROOT: folder root cài đặt Go, mặc định sẽ tự phát hiện nếu trước đó trong hệ thông đã cài sẵn Go
+Mở Goland -> <strong>File</strong> -> <strong>New</strong> -> <strong>Project</strong>
+
+<strong>Location</strong>: nơi sẽ lưu project sau khi được tạo<br>
+<strong>GOROOT</strong>: folder root cài đặt Go, mặc định sẽ tự phát hiện nếu trước đó trong hệ thông đã cài sẵn Go
 
 <img src="images/21.png" style="display: block; margin-left: auto;margin-right: auto;"/>
 <br>
 
 Sau khi bấm create, project đã được tạo với go module (go.mod) đã được tạo sẵn (kể từ phiên bản 1.16 - https://github.com/nartvt/go-learn/tree/master/go-history)
 
-<img src="images/22.png"/>
-<br>
+<img src="images/22.png"/><br><br>
 
-Chuột phải vào project chọn New -> go file , đặt tên, ở đây là main.go
-Thêm 1 đoạn code đơn giản là in ra 1 dòng "Hello World" quen thuộc của mọi lập trình viên như sau 
-
-<img src="images/23.png" style="display: block; margin-left: auto;margin-right: auto;"/>
-<br>
-
-để chạy được chương trình, ta cần chỉ cho go compiler biết đâu là nơi nó cần lấy file để chạy như sau:
-Trên góc phải của Goland, click vào <strong>Add Configuration</strong>
-> chọn dấu + ở bên góc trên trái của màn hình hiện ra, chọn Go build trong danh sách -> apl 
-
-Chọn Apply -> OK <br>
-<img src="images/24.png" />
-<br>
-
-<img src="images/25.png" /> <br>
-
-Click vào nút Run <br>
-<img src="images/26.png"/> <br>
-
-Và cái kết<br>
-
-<img src="images/27.png"/><br>
+Click phải vào project chọn <strong>New</strong> -> <strong>Go File</strong>
+đăt tên file và in ra dòng <i>Hello World</i><br>
+Click vào Run
+<img src="images/23.png"/><br>
 
 Nguồn: 
 1. https://golang.org/doc/install#tarball_non_standard
