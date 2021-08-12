@@ -191,7 +191,7 @@ Một kiểu dữ liệu tương tự như mảng trong nhưng không cần quy 
 Cú pháp khai báo như sau:  
 ```Go
 func main() {
-	var primes [] int = []int{2, 3, 5, 7, 11, 13}
+    var primes [] int = []int{2, 3, 5, 7, 11, 13}
     primes2:= []int{2, 3, 5, 7, 11, 13}
     primes3:=make([]int,6)
     primes3[0] = 2
