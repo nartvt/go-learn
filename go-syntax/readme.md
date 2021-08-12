@@ -187,10 +187,8 @@ func main() {
 }
 ```
 ## Kiểu slice 
-Một kiểu dữ liệu tương tự như mảng trong nhưng không cần quy định trước kích thước(dynamically-sized) theo, là tập hợp các giá trị có kiểu dữ liệu
-Cú pháp khai báo: 
-
-Ví dụ: 
+Một kiểu dữ liệu tương tự như mảng trong nhưng không cần quy định trước kích thước(dynamically-sized) theo, là tập hợp các giá trị có cùng kiểu dữ liệu<br>
+Cú pháp khai báo như sau:  
 ```Go
 func main() {
 	var primes [] int = []int{2, 3, 5, 7, 11, 13}
