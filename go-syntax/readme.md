@@ -3,13 +3,13 @@
 # Từ khóa trong Go
 Cũng như các ngôn ngữ khác, trong golang cũng có những từ khóa mà cũng ta không được phép sử dụng để định danh (dùng khai báo tên biến, tên hàm.. ).
 Trong golang có 25 từ khóa:
-
+```Go
     break        default      func         interface    select
     case         defer        go           map          struct
     chan         else         goto         package      switch
     const        fallthrough  if           range        type
     continue     for          import       return       var
-
+```
 khá ít nếu so với các ngôn ngữ khác như: Java(50 từ khóa), Python(35 từ khóa)
 # Khai báo kiểu dữ liệu trong Go
 ## Với kiểu dữ liệu nguyên thủy(primitive type)
