@@ -251,34 +251,13 @@ func main() {
 ## Kiểu dữ liệu slice 
 - Một kiểu dữ liệu tương tự như mảng trong nhưng không cần quy định trước kích thước(dynamically-sized) theo
 - Là tập hợp các giá trị có cùng kiểu dữ liệu<br>
-Cú pháp khai báo như sau:  
+ví dụ khai báo một slice số nguyên như sau:  
 ```Go
-func main() {
-	var primes [] int
-    primes2:= []int{2, 3, 5, 7, 11, 13}
-    primes3:=make([]int,6)
-    // truy xuất các phần tử của slice thông qua index
-    primes3[0] = 2
-    primes3[1] = 3
-    primes3[2] = 5
-    primes3[3] = 7 
-    primes3[4] = 11
-    primes3[5] = 13
+var primes [] int
+```
+- Thêm giá trị vào  slice không cần theo index 
+> sẽ thêm phần tử vào slice bằng từ khóa <strong style="color: white">append</strong><br>
 
-    //[low:high] lấy ra giá trị từ bắt đầu 
-    // vị trí low đến trươc vị trí high -1
-	var s []int = primes[1:4] 
-	fmt.Println(s) // [3 5 7]
-    fmt.Println(primes2) // [2, 3, 5, 7, 11, 13]
-    fmt.Println(primes3) // [2, 3, 5, 7, 11, 13]
-}
-```
-trong thực tế xây dựng dự án, rấy hiếm khi dùng đến kiểu khai báo 
-``` Go
-primes2:= []int{2, 3, 5, 7, 11, 13}
-primes3:=make([]int,6)
-```
-bởi vì tùy theo điều kiện tình hình cụ thể, sẽ thêm phần tử vào slice bằng từ khóa <strong>append</strong><br> 
 Ví dụ dưới đây khai báo 1 slice chưa số nguyên, và chỉ thêm vào slice nếu số > 10
 ``` Go
 func addNumber(number int){
@@ -288,10 +267,79 @@ func addNumber(number int){
     }
 }
 ```
+- Gộp 2 slice lại, sử dụng từ khóa append
+```Go
+slice1:=[]int{1,2,3}
+slice2:=[]int{4}
+slice3:=append(slice1,slice2...)
+fmt.Println(slice3) // [1 2 3 4]
+```
+- Slice literals - một cách mà khi khai báo, các giá trị là không đổi
+ > chỉ nên sử dụng trong trường hợp các giá trị là cố định và không đổi , chỉ việc lấy ra sử dụng, như các hằng số , các giá trị không đổi
+```Go
+slice:=[]int{1,2,3,4,5,6}
+fmt.Println(slice) // [1 2 3 4 5 6]
+```
+- Lấy chiều dài 1 slice 
+> sử dụng từ khóa len(slice)
+``` Go 
+slice:=[]int{1,2,3,4,5,6}
+fmt.Println(len(slice)) // 6
+```
 ## Kiểu dữ liệu map trong golang
 - Là tập hợp ánh xạ các giá trị(value) theo khóa(key)
 - Mỗi khóa trong map là duy nhất
+- Nếu thêm 2 khóa trùng nhau, sẽ lấy giá trị sau
+
 Khai báo map với dynamically-sized
+```Go
+maps:=make(map[string]int)
+maps["A"] = 1
+maps["B"] = 2
+maps["C"] = 20
+fmt.Println(maps) // map[A:1 B:20 C:20]
+```
+- Map literals - Một cách khai báo map khác<br>
+cách này tạo ra và gán giá trị cố định cho nó luôn
+trong trường hợp các giá trị là hằng cố định và không thay đổi, chỉ việc lấy ra sử dụng
+
+```Go
+// Một cách khai báo cồng kềnh 
+var maps map[string] int = map[string]int{
+    "A": 1,
+    "B": 2,
+    "C": 3,
+}
+fmt.Println(maps) // map[A:1 B:2 C:3]
+```
+```Go
+// Bớt cồng kềnh hơn bên trên
+var maps = map[string]int{
+    "A": 1,
+    "B": 2,
+    "C": 3,
+}
+fmt.Println(maps) // map[A:1 B:2 C:3]
+```
+```Go
+// Bớt cồng kềnh hơn bên trên
+maps:= map[string]int{
+    "A": 1,
+    "B": 2,
+    "C": 3,
+}
+fmt.Println(maps) // map[A:1 B:2 C:3]
+```
+
+- Xóa một phẩn tử trong map
+```Go
+maps:=make(map[string]int)
+maps["A"] = 1
+maps["B"] = 2
+maps["C"] = 20
+delete(maps, "B")
+fmt.Println(maps) // map[A:1 C:20]
+```
 
 Nguồn tham khảo:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar
