@@ -11,12 +11,14 @@ Trong golang có 25 từ khóa:
     continue     for          import       return       var
 
 khá ít nếu so với các ngôn ngữ khác như: Java(50 từ khóa), Python(35 từ khóa)
-# syntax cơ bản trong Go
-- Go không có OOP mà là functional , việc phát triển dự án đôi khi sẽ phải code hơi nhiều
-tuy nhiên cú pháp trong Go lại hết sức đơn giản , dễ dàng cho người mới bắt đầu
+# Những cái cơ bản cần biết trong Go
+- Cú pháp Go đơn giản , dễ dàng cho người mới bắt đầu
+- Go không có OOP mà là functional
 - Trong Go không sử dụng dấu chấm phẩy (;) khi kết thúc một dòng 
-- Khai báo kiểu dữ liệu trong Go: <tên đại diện> <kiểu dữ liệu> <br>
-trong Java : <Kiểu dữ liệu> <tên đại diện><br>
+- Khai báo kiểu dữ liệu trong Go, kiểu dữ liệu sẽ viết sau tên định danh<br>
+
+        Go : <tên đại diện> <kiểu dữ liệu>
+        Java : <Kiểu dữ liệu> <tên đại diện>
 Ví dụ: 
 ```Go
  var number int = 10
@@ -31,20 +33,36 @@ void addNumber(int number){
 
 }
 ```
-- Trong Go export một thuộc tính, struct , hoặc hàm ra ngoài, 
-chỉ cần viết hoa chữ cái đầu tiên trong tên 
-nếu viết thường, nó chỉ có thể sử dụng trong phạm vi package mà nó được khai báo
+- Trong Go nếu viết thường chữ cái đầu tiên trong tên(thuộc tính, hàm, sruct) thì scope của nó chỉ nằm trong phạm vi package nó được khai báo
+Muốn truy cập bên ngoài package , viết hoa chữ cái đầu tiên của nó lên
 ```Go
 package main
 // chỉ cho phép truy cập từ bên ngoài package
 func GetA()string{
-    return ""
+    return "A"
 }
 // chỉ cho phép truy cập từ bên trong package
 func getB()string{
-    return ""
+    return "B"
 }
 ```
+- Trong Go khai báo 1 biến mà không sử dụng không được chấp nhận trong go
+chương trình sẽ không chạy và báo lỗi nếu bạn làm điều này
+```Go
+func main() {
+	 var number int = 10
+	 chuoi:="ABC" // khai báo nhưng không sử dụng
+	 fmt.Println(number)
+}
+```
+nó nói ràng, "chuoi" đã được khao báo nhưng không được sử dụng
+> ./prog.go:7:3: chuoi declared but not used <br> Go build failed.
+
+- Các thư viện của Go nếu không phải build-in đều được cài đặt từ github
+
+        go get <github repository>
+- Kể từ 1.16(hiện tại 1.67)Go sử dụng go module(go.mod) để quán lý các package cài đặt (tương tự như pom.xml hoặc gradle trong java )
+
 # Khai báo kiểu dữ liệu trong Go
 ## Với kiểu dữ liệu nguyên thủy(primitive type)
 Cơ bản có 3 cách khai báo với loại dữ liệu này:
