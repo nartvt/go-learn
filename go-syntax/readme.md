@@ -11,6 +11,40 @@ Trong golang có 25 từ khóa:
     continue     for          import       return       var
 
 khá ít nếu so với các ngôn ngữ khác như: Java(50 từ khóa), Python(35 từ khóa)
+# syntax cơ bản trong Go
+- Go không có OOP mà là functional , việc phát triển dự án đôi khi sẽ phải code hơi nhiều
+tuy nhiên cú pháp trong Go lại hết sức đơn giản , dễ dàng cho người mới bắt đầu
+- Trong Go không sử dụng dấu chấm phẩy (;) khi kết thúc một dòng 
+- Khai báo kiểu dữ liệu trong Go: <tên đại diện> <kiểu dữ liệu> <br>
+trong Java : <Kiểu dữ liệu> <tên đại diện><br>
+Ví dụ: 
+```Go
+ var number int = 10
+ func addNumber(number int){
+    
+}
+```
+Trong Java
+```Java
+int number = 10;
+void addNumber(int number){
+
+}
+```
+- Trong Go export một thuộc tính, struct , hoặc hàm ra ngoài, 
+chỉ cần viết hoa chữ cái đầu tiên trong tên 
+nếu viết thường, nó chỉ có thể sử dụng trong phạm vi package mà nó được khai báo
+```Go
+package main
+// chỉ cho phép truy cập từ bên ngoài package
+func GetA()string{
+    return ""
+}
+// chỉ cho phép truy cập từ bên trong package
+func getB()string{
+    return ""
+}
+```
 # Khai báo kiểu dữ liệu trong Go
 ## Với kiểu dữ liệu nguyên thủy(primitive type)
 Cơ bản có 3 cách khai báo với loại dữ liệu này:
@@ -36,11 +70,15 @@ type User struct {
 }
 
 func main() {
-	var user User // khai báo và cấp phát bộ nhớ với kiểu dữ liệu là User,
+    // Cách 1:  khai báo và cấp phát bộ nhớ với kiểu dữ liệu là User,
     // là 1 giá trị(mặc định {0})
-	user2:=new(User) // khai báo và cấp phát bộ nhớ với kiểu dữ liệu là User ,
+	var user User 
+    // Cách 2: khai báo và cấp phát bộ nhớ với kiểu dữ liệu là User ,
     //  giá trị trả ra một con trỏ là giá trị của vùng nhớ được trỏ,
     //  mặc định là &{0}
+	user2:=new(User)
+
+    // 
     fmt.Println(user)  //  {0}
 	fmt.Println(user2) //  &{0}
 }
@@ -67,7 +105,8 @@ fmt.Println(primes) // [1 2]
 # Các kiểu dữ liệu cơ bản trong Go
 > Tham khảo: https://golang.org/ref/spec#Predeclared_identifiers
 ## Số Nguyên: 
-Giá trị mặc định: 0
+- Giá trị mặc định: 0
+
 Kiểu dữ liệu | Số bit biểu diễn | Giới hạn biểu diễn 
 -------------|------------------|-------------------
 int8         | 8 bit            | -128 đến 127 
@@ -83,7 +122,8 @@ rune         | đại diện cho kiểu int32
 
 
 ## Số Nguyên Động:
-Giá trị mặc định: 0
+- Giá trị mặc định: 0
+
 Kiểu dữ liệu | Số bit biểu diễn  | Giới hạn biểu diễn 
 --------------|------------------ |-------------------
 int           | ?                 | ?
@@ -96,30 +136,34 @@ uintptr       | như int, uint, nhưng lưu trữ giá trị của 1 con trỏ |
     điều hành 64 bit, thì nó sẽ là 64 bit
 
 ## Số thực( số hữu tỉ, số thập phân):
-Giá trị mặc định: 0.0
+- Giá trị mặc định: 0.0
+
 Kiểu dữ liệu | Số bit biểu diễn | Giới hạn biểu diễn 
 -------------|------------------|--------------------------------------------
 float32      | 32 bit           |  số dấu phẩy động 32-bit theo chuẩn IEEE-754 
 float64      | 64 bit           |  số dấu phẩy động 64-bit theo chuẩn IEEE-754 
 
 ## Số phức:
-Giá trị mặc định: (0+0i)
+- Giá trị mặc định: (0+0i)
+
 Kiểu dữ liệu | Số bit biểu diễn | Giới hạn biểu diễn 
 -------------|------------------|----------------------------------------------
 complex64    | 64 bit(32 + 32)  |  phần thực và phần ảo mỗi phần là 1 số float32
 complex128   | 128 bit(64 + 64) |  phần thực và phần ảo mỗi phần là 1 số float64
 
 ## Kiểu boolean:
-Giá trị mặc định: false
+- Giá trị mặc định: false
+
 Kiểu dữ liệu | Số bit biểu diễn | Giới hạn biểu diễn 
 -------------|------------------|----------------------------------------------
 bool         |1 bit             | chỉ biểu diễn 2 giá trị là true(1) hoặc false (0)  
 
 ## Kiểu chuỗi:
-Kiểu dữ liệu mặc định: "".
+- Giá trị mặc định: "".
+
 Kiểu dữ liệu   | Giới hạn biểu diễn
 ---------------|----------------------------------------------------------------
-string         | là kiểu dữ liệu được định nghĩa là 1 mảng các byte(không có số âm) theo chuẩn UTF-8 và không có giá trị nil( là null trong Go ), và kiểu dữ liệu bất biến(immutable, không thể thay đổi nội dung của chuỗi sau khi được khởi tạo)
+string         | là kiểu dữ liệu được định nghĩa là 1 mảng các byte(không có số âm) theo chuẩn UTF-8 và không có giá trị nil( là null trong Go ), và kiểu dữ liệu bất biến (immutable, không thể thay đổi nội dung của chuỗi sau khi được khởi tạo)
 
 ## Kiểu interface 
 Đơn giản là mọi kiểu trong Go, có thể thay thế cho hầu hết kiểu dữ liệu trong Go(khác với kiểu <strong>interface struct</strong>)
@@ -165,7 +209,7 @@ test2(data int)
 nhận vào 1 kiểu dữ liệu là int, nhưng ở lời gọi hàm lại truyền vào 1 kiểu interface {}
 
 ## Kiểu struct 
-Là một tập hợp các trường có kiểu dữ liệu có thể giống và khác nhau trong Go (tương tự như class trong Java)
+- Tập hợp các trường có kiểu dữ liệu có thể giống và khác nhau trong Go (tương tự như class trong Java)
 ``` Go
 package main
 
@@ -186,14 +230,16 @@ func main() {
     fmt.Println(user.Age)      // 25
 }
 ```
-## Kiểu slice 
-Một kiểu dữ liệu tương tự như mảng trong nhưng không cần quy định trước kích thước(dynamically-sized) theo, là tập hợp các giá trị có cùng kiểu dữ liệu<br>
+## Kiểu dữ liệu slice 
+- Một kiểu dữ liệu tương tự như mảng trong nhưng không cần quy định trước kích thước(dynamically-sized) theo
+- Là tập hợp các giá trị có cùng kiểu dữ liệu<br>
 Cú pháp khai báo như sau:  
 ```Go
 func main() {
-	var primes [] int = []int{2, 3, 5, 7, 11, 13}
+	var primes [] int
     primes2:= []int{2, 3, 5, 7, 11, 13}
     primes3:=make([]int,6)
+    // truy xuất các phần tử của slice thông qua index
     primes3[0] = 2
     primes3[1] = 3
     primes3[2] = 5
@@ -201,17 +247,36 @@ func main() {
     primes3[4] = 11
     primes3[5] = 13
 
-	var s []int = primes[1:4] // lấy ra giá trị từ bắt đầu vị trí 1 đến trươc vị trí 4
+	var s []int = primes[1:4] //[low:high] lấy ra giá trị từ bắt đầu vị trí low đến trươc vị trí high -1
 	fmt.Println(s) // [3 5 7]
     fmt.Println(primes2) // [2, 3, 5, 7, 11, 13]
     fmt.Println(primes3) // [2, 3, 5, 7, 11, 13]
 }
 ```
+trong thực tế xây dựng dự án, rấy hiếm khi dùng đến kiểu khai báo 
+``` Go
+primes2:= []int{2, 3, 5, 7, 11, 13}
+primes3:=make([]int,6)
+```
+bởi vì tùy theo điều kiện tình hình cụ thể, sẽ thêm phần tử vào slice bằng từ khóa <strong>append</strong><br> 
+Ví dụ dưới đây khai báo 1 slice chưa số nguyên, và chỉ thêm vào slice nếu số > 10
+``` Go
+func addNumber(number int){
+    var slice [] int
+    if number > 10{
+        slice = append(slice,number)
+    }
+}
+```
+## Kiểu dữ liệu map trong golang
+- Là tập hợp ánh xạ các giá trị(value) theo khóa(key)
+- Mỗi khóa trong map là duy nhất
+Khai báo map với dynamically-sized
 
-Nguồn:
-1. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar
-2. https://realpython.com/python-keywords/
-3. https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html
-4. https://golang.org/ref/spec
-5. https://golang.org/ref/spec#Predeclared_identifiers
-6. https://tour.golang.org/basics/11
+Nguồn tham khảo:
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar
+- https://realpython.com/python-keywords/
+- https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html
+- https://golang.org/ref/spec
+- https://golang.org/ref/spec#Predeclared_identifiers
+- https://tour.golang.org/basics/11
