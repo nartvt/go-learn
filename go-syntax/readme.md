@@ -33,7 +33,7 @@ void addNumber(int number){
 
 }
 ```
-- Trong Go nếu viết thường chữ cái đầu tiên trong tên(thuộc tính, hàm, sruct) thì scope của nó chỉ nằm trong phạm vi package nó được khai báo
+Trong Go nếu viết thường chữ cái đầu tiên trong tên(thuộc tính, hàm, sruct) thì scope của nó chỉ nằm trong phạm vi package nó được khai báo
 Muốn truy cập bên ngoài package , viết hoa chữ cái đầu tiên của nó lên
 ```Go
 package main
@@ -46,7 +46,7 @@ func getB()string{
     return "B"
 }
 ```
-- Trong Go khai báo 1 biến mà không sử dụng không được chấp nhận trong go
+Trong Go khai báo 1 biến mà không sử dụng không được chấp nhận trong go
 chương trình sẽ không chạy và báo lỗi nếu bạn làm điều này
 ```Go
 func main() {
@@ -58,10 +58,10 @@ func main() {
 nó nói ràng, "chuoi" đã được khao báo nhưng không được sử dụng
 > ./prog.go:7:3: chuoi declared but not used <br> Go build failed.
 
-- Các thư viện của Go nếu không phải build-in đều được cài đặt từ github
+Các thư viện của Go nếu không phải build-in đều được cài đặt từ github
 
         go get <github repository>
-- Kể từ 1.16(hiện tại 1.67)Go sử dụng go module(go.mod) để quán lý các package cài đặt (tương tự như pom.xml hoặc gradle trong java )
+Kể từ 1.16(hiện tại 1.67)Go sử dụng go module(go.mod) để quán lý các package cài đặt (tương tự như pom.xml hoặc gradle trong java )
 
 # Khai báo kiểu dữ liệu trong Go
 ## Với kiểu dữ liệu nguyên thủy(primitive type)
@@ -227,7 +227,7 @@ test2(data int)
 nhận vào 1 kiểu dữ liệu là int, nhưng ở lời gọi hàm lại truyền vào 1 kiểu interface {}
 
 ## Kiểu struct 
-- Tập hợp các trường có kiểu dữ liệu có thể giống và khác nhau trong Go (tương tự như class trong Java)
+Tập hợp các trường có kiểu dữ liệu có thể giống và khác nhau trong Go (tương tự như class trong Java)
 ``` Go
 package main
 
@@ -249,14 +249,14 @@ func main() {
 }
 ```
 ## Kiểu dữ liệu slice 
-- Một kiểu dữ liệu tương tự như mảng trong nhưng không cần quy định trước kích thước(dynamically-sized) theo
+- Một kiểu dữ liệu tương tự như mảng trong nhưng không cần quy định trước kích thước(dynamically-sized)
 - Là tập hợp các giá trị có cùng kiểu dữ liệu<br>
 ví dụ khai báo một slice số nguyên như sau:  
 ```Go
 var primes [] int
 ```
 - Thêm giá trị vào  slice không cần theo index 
-> sẽ thêm phần tử vào slice bằng từ khóa <strong style="color: white">append</strong><br>
+> sử dụng từ khóa <strong style="color: white">append</strong><br>
 
 Ví dụ dưới đây khai báo 1 slice chưa số nguyên, và chỉ thêm vào slice nếu số > 10
 ``` Go
