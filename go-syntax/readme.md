@@ -247,7 +247,9 @@ func main() {
     primes3[4] = 11
     primes3[5] = 13
 
-	var s []int = primes[1:4] //[low:high] lấy ra giá trị từ bắt đầu vị trí low đến trươc vị trí high -1
+    //[low:high] lấy ra giá trị từ bắt đầu 
+    // vị trí low đến trươc vị trí high -1
+	var s []int = primes[1:4] 
 	fmt.Println(s) // [3 5 7]
     fmt.Println(primes2) // [2, 3, 5, 7, 11, 13]
     fmt.Println(primes3) // [2, 3, 5, 7, 11, 13]
