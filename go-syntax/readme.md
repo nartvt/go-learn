@@ -250,13 +250,14 @@ func main() {
 ```
 ## Kiểu dữ liệu slice 
 - Một kiểu dữ liệu tương tự như mảng trong nhưng không cần quy định trước kích thước(dynamically-sized)
+- Có thể thêm phần tử nhiều hơn giá trị size ban đầu đã cố định
 - Là tập hợp các giá trị có cùng kiểu dữ liệu<br>
 ví dụ khai báo một slice số nguyên như sau:  
 ```Go
 var primes [] int
 ```
 - Thêm giá trị vào  slice không cần theo index 
-> sử dụng từ khóa <strong style="color: white">append</strong><br>
+> Sử dụng từ khóa <strong style="color: white">append</strong><br>
 
 Ví dụ dưới đây khai báo 1 slice chưa số nguyên, và chỉ thêm vào slice nếu số > 10
 ``` Go
@@ -285,6 +286,16 @@ fmt.Println(slice) // [1 2 3 4 5 6]
 ``` Go 
 slice:=[]int{1,2,3,4,5,6}
 fmt.Println(len(slice)) // 6
+```
+## Kiểu dữ liệu Arrays
+- Một kiểu dữ liệu tương tự như slice nhưng cố định trước kích thước(fixed-sized)
+- Không thể thêm phần tử nhiều hơn giá trị size ban đầu đã cố định
+- Là tập hợp các giá trị có cùng kiểu dữ liệu<br>
+```Go
+var numbers [2] int
+numbers[0] = 10
+numbers[1] = 11
+fmt.Println(numbers) // [0 1]
 ```
 ## Kiểu dữ liệu map trong golang
 - Là tập hợp ánh xạ các giá trị(value) theo khóa(key)
