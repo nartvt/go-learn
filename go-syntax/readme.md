@@ -14,6 +14,7 @@ khá ít nếu so với các ngôn ngữ khác như: Java(50 từ khóa), Python
 # Những cái cơ bản cần biết trong Go
 - Cú pháp Go đơn giản , dễ dàng cho người mới bắt đầu
 - Go không có OOP mà là functional
+- function main là duy nhất và nó chỉ nằm trong  package main
 - Trong Go không sử dụng dấu chấm phẩy (;) khi kết thúc một dòng 
 - Khai báo kiểu dữ liệu trong Go, kiểu dữ liệu sẽ viết sau tên định danh<br>
 
@@ -33,7 +34,7 @@ void addNumber(int number){
 
 }
 ```
-Trong Go nếu viết thường chữ cái đầu tiên trong tên(thuộc tính, hàm, sruct) thì scope của nó chỉ nằm trong phạm vi package nó được khai báo
+- Trong Go nếu viết thường chữ cái đầu tiên trong tên(thuộc tính, hàm, sruct) thì scope của nó chỉ nằm trong phạm vi package nó được khai báo
 Muốn truy cập bên ngoài package , viết hoa chữ cái đầu tiên của nó lên
 ```Go
 package main
@@ -46,7 +47,7 @@ func getB()string{
     return "B"
 }
 ```
-Trong Go khai báo 1 biến mà không sử dụng không được chấp nhận trong go
+- Trong Go khai báo 1 biến mà không sử dụng không được chấp nhận trong go
 chương trình sẽ không chạy và báo lỗi nếu bạn làm điều này
 ```Go
 func main() {
@@ -58,7 +59,7 @@ func main() {
 nó nói ràng, "chuoi" đã được khao báo nhưng không được sử dụng
 > ./prog.go:7:3: chuoi declared but not used <br> Go build failed.
 
-Các thư viện của Go nếu không phải build-in đều được cài đặt từ github
+- Các thư viện của Go nếu không phải build-in đều được cài đặt từ github
 
         go get <github repository>
 Kể từ 1.16(hiện tại 1.67)Go sử dụng go module(go.mod) để quán lý các package cài đặt (tương tự như pom.xml hoặc gradle trong java )
@@ -101,7 +102,7 @@ func main() {
 	fmt.Println(user2) //  &{0}
 }
 ```
-## Với kiểu dữ liệu tập hợp(arrays, slice)
+## Với kiểu dữ liệu tập hợp(slice)
 Có 4 cách khai báo như sau: 
 ```Go
 var primes [] int  // []
