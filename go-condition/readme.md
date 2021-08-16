@@ -202,3 +202,7 @@ done
 0
 */
 ```
+
+Nguồn: 
+- https://tour.golang.org/
+- https://golang.org/ref/spec
