@@ -138,9 +138,8 @@ func main() {
 	}
 }
 ```
-## Vòng lặp For có trong Go
-- Vòng lặp trong Go sử dụng for 
-cấu trúc 1 vòng lặp for gồm 3 phần cơ bản, phân cách bởi dấu chấm phẩy(;) như sau
+## Vòng lặp For
+- Vòng lặp trong Go sử dụng for, cấu trúc 1 vòng lặp for gồm 3 phần cơ bản, phân cách bởi dấu chấm phẩy(;) như sau
     > <giá trị khỏi tạo>;<điều kiện lặp>;<điều kiện khi kết thúc 1 vòng lặp>
 - Không cần sử dụng dấu () để bọc lại điều kiện trong for
 ```Go
@@ -172,10 +171,10 @@ func getString() string{
 	return ""
 }
 func main() {
-	getString()
+	getString() // Hello World 
 }
 ```
-- Câu lênh defer được push vào 1 stack, vì vậy khi kết thúc hàm, sẽ được lấy giá trị ra theo quy tắc las-int-first-out
+- Câu lênh <b>defer</b> được push vào 1 stack, vì vậy nếu nhiều giá trị được đánh dấu <b>defer</b> khi chưa kết thúc hàm, thì khi kết thúc giá trị sẽ được lấy ra theo quy tắc las-int-first-out(stack rule)
 ```Go
 
 func main() {
@@ -187,7 +186,7 @@ func main() {
 
 	fmt.Println("done")
 }
-/* kết thúc hàm in ra : 
+/* kết thúc hàm in ra :
 counting
 done
 9

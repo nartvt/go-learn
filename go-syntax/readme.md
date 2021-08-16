@@ -54,7 +54,7 @@ func getB()string{
     return "B"
 }
 ```
-- Trong Go khai báo 1 biến mà không sử dụng không được chấp nhận trong go
+- Khai báo 1 biến mà không sử dụng là không được chấp nhận trong go
 chương trình sẽ không chạy và báo lỗi nếu bạn làm điều này
 ```Go
 func main() {
@@ -69,7 +69,7 @@ nó nói ràng, "chuoi" đã được khao báo nhưng không được sử dụ
 - Các thư viện của Go nếu không phải build-in đều được cài đặt từ github
 
         go get <github repository>
-Kể từ 1.16(hiện tại 1.67)Go sử dụng go module(go.mod) để quán lý các package cài đặt (tương tự như pom.xml hoặc gradle trong java )
+Kể từ 1.16 (hiện tại 1.67) Go sử dụng go module(go.mod) để quán lý các package cài đặt (tương tự như pom.xml hoặc gradle trong java )
 
 # Khai báo kiểu dữ liệu trong Go
 ## Với kiểu dữ liệu nguyên thủy(primitive type)
@@ -207,7 +207,7 @@ func main() {
 	fmt.Println(interfaceTest) // -> "abcd"
 }
 ```
-Lưu ý: kiểu dữ liệu interface{} có thể đại diện cho hầu hết mọi kiểu dữ liệu trong Go, nhương ngược lại thì không
+<b>Lưu ý</b>: kiểu dữ liệu <b>interface{}</b> có thể đại diện cho hầu hết mọi kiểu dữ liệu trong Go, nhưng ngược lại thì không
 
 Xem ví dụ dưới đây: 
 ```Go
@@ -228,7 +228,7 @@ func test2(data int) {
 Chạy đoạn mã trên ta sẽ nhận được một ngoại lệ 
 > cannot use data (type interface {}) as type int in argument to test2: need type assertion
 
-tức là ở method 
+nghĩa là ở hàm 
 ```Go
 test2(data int)
 ```
@@ -256,8 +256,21 @@ func main() {
     fmt.Println(user.Age)      // 25
 }
 ```
+## Kiểu dữ liệu Arrays
+- Một kiểu dữ liệu tương tự như slice nhưng cố định trước kích thước(fixed-sized)
+- Không thể thêm phần tử nhiều hơn giá trị size ban đầu đã cố định
+- Là tập hợp các giá trị có cùng kiểu dữ liệu<br>
+```Go
+var numbers [2] int
+numbers[0] = 10
+numbers[1] = 11
+fmt.Println(numbers) // [0 1]
+```
+
 ## Kiểu dữ liệu slice 
 - Một kiểu dữ liệu tương tự như mảng trong nhưng không cần quy định trước kích thước(dynamically-sized)
+- Bản chất là 1 con trỏ mảng trỏ đến 1 mảng bên dưới
+- Light weight data structure
 - Có thể thêm phần tử nhiều hơn giá trị size ban đầu đã cố định
 - Là tập hợp các giá trị có cùng kiểu dữ liệu<br>
 ví dụ khai báo một slice số nguyên như sau:  
@@ -295,16 +308,7 @@ fmt.Println(slice) // [1 2 3 4 5 6]
 slice:=[]int{1,2,3,4,5,6}
 fmt.Println(len(slice)) // 6
 ```
-## Kiểu dữ liệu Arrays
-- Một kiểu dữ liệu tương tự như slice nhưng cố định trước kích thước(fixed-sized)
-- Không thể thêm phần tử nhiều hơn giá trị size ban đầu đã cố định
-- Là tập hợp các giá trị có cùng kiểu dữ liệu<br>
-```Go
-var numbers [2] int
-numbers[0] = 10
-numbers[1] = 11
-fmt.Println(numbers) // [0 1]
-```
+
 ## Kiểu dữ liệu map trong golang
 - Là tập hợp ánh xạ các giá trị(value) theo khóa(key)
 - Mỗi khóa trong map là duy nhất
