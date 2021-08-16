@@ -12,9 +12,9 @@ Trong golang có 25 từ khóa:
 
 khá ít nếu so với các ngôn ngữ khác như: Java(50 từ khóa), Python(35 từ khóa)
 # Những cái cơ bản cần biết trong Go
-- Cú pháp Go đơn giản , dễ dàng cho người mới bắt đầu
-- Go không có OOP mà là functional
-- Hàm main là duy nhất và nó chỉ nằm trong  package main<br>
+##### 1. Cú pháp Go đơn giản , dễ dàng cho người mới bắt đầu
+##### 2. Go không có OOP mà là functional
+##### 3. Hàm main là duy nhất và nó chỉ nằm trong  package main<br>
 ```Go
     // func <function name>(paremeter input ) <return type>{ // something }
 
@@ -22,8 +22,37 @@ khá ít nếu so với các ngôn ngữ khác như: Java(50 từ khóa), Python
         return number*2
     }
 ```
-- Trong Go không sử dụng dấu chấm phẩy (;) khi kết thúc một dòng 
-- Khai báo kiểu dữ liệu trong Go, kiểu dữ liệu sẽ viết sau tên định danh<br>
+##### 4. Import trong Go: khi sử dụng 1 thư viện nào đấy(kể cả build-in) khác package với package hiện tại, cần import vào để sử dụng nằm trong dấu nháy kép ""
+```Go
+package main
+import "fmt"
+func main(){
+    fmt.Println("Hello World")
+}
+```
+import thư viện trong go có 2 cách
+Cách 1, import riêng từng package
+```Go
+package main
+import "fmt"
+import "math"
+func main(){
+      fmt.Println("Hello World - ", math.Sqrt(4))
+}
+```
+Cách 2 - import các package lồn trong ngoặc tròn đơn 
+```Go
+package main
+import (
+    "fmt"
+    "math"
+)
+func main(){
+    fmt.Println("Hello World - ", math.Sqrt(4))
+}
+```
+##### 5. Trong Go không sử dụng dấu chấm phẩy (;) khi kết thúc một dòng 
+##### Khai báo kiểu dữ liệu trong Go, kiểu dữ liệu sẽ viết sau tên định danh<br>
 
         Go : <tên đại diện> <kiểu dữ liệu>
         Java : <Kiểu dữ liệu> <tên đại diện>
@@ -41,7 +70,7 @@ void addNumber(int number){
 
 }
 ```
-- Trong Go nếu viết thường chữ cái đầu tiên trong tên(thuộc tính, hàm, sruct) thì scope của nó chỉ nằm trong phạm vi package nó được khai báo
+##### 6. Trong Go nếu viết thường chữ cái đầu tiên trong tên(thuộc tính, hàm, sruct) thì scope của nó chỉ nằm trong phạm vi package nó được khai báo
 Muốn truy cập bên ngoài package , viết hoa chữ cái đầu tiên của nó lên
 ```Go
 package main
@@ -54,7 +83,7 @@ func getB()string{
     return "B"
 }
 ```
-- Khai báo 1 biến mà không sử dụng là không được chấp nhận trong go
+##### 7. Khai báo 1 biến mà không sử dụng là không được chấp nhận trong go
 chương trình sẽ không chạy và báo lỗi nếu bạn làm điều này
 ```Go
 func main() {
@@ -66,10 +95,10 @@ func main() {
 nó nói ràng, "chuoi" đã được khao báo nhưng không được sử dụng
 > ./prog.go:7:3: chuoi declared but not used <br> Go build failed.
 
-- Các thư viện của Go nếu không phải build-in đều được cài đặt từ github
+##### 8. Các thư viện của Go nếu không phải build-in đều được cài đặt từ github
 
         go get <github repository>
-Kể từ 1.16 (hiện tại 1.67) Go sử dụng go module(go.mod) để quán lý các package cài đặt (tương tự như pom.xml hoặc gradle trong java )
+##### 9. Kể từ 1.16 (hiện tại 1.67) Go sử dụng go module(go.mod) để quán lý các package cài đặt (tương tự như pom.xml hoặc gradle trong java )
 
 # Khai báo kiểu dữ liệu trong Go
 ## Với kiểu dữ liệu nguyên thủy(primitive type)
@@ -268,12 +297,20 @@ fmt.Println(numbers) // [0 1]
 ```
 
 ## Kiểu dữ liệu slice 
-- Một kiểu dữ liệu tương tự như mảng trong nhưng không cần quy định trước kích thước(dynamically-sized)
-- Bản chất là 1 con trỏ mảng trỏ đến 1 mảng bên dưới
 - Light weight data structure
+- Tương tự như mảng trong nhưng không cần quy định trước kích thước(dynamically-sized)
+- Bản chất là 1 con trỏ mảng trỏ đến 1 mảng bên dưới
 - Có thể thêm phần tử nhiều hơn giá trị size ban đầu đã cố định
 - Là tập hợp các giá trị có cùng kiểu dữ liệu<br>
-ví dụ khai báo một slice số nguyên như sau:  
+
+Trong 1 slice gồm 3 thành phần:
+
+    1. pointer: trỏ đến 1 mảng 
+    2. length: chiêu dài, là số phần tử hiện có trong slice
+    3. capacity: tối đa số phần tử mà 1 slice có thể chứa
+
+Ví dụ khai báo một slice số nguyên như sau:  
+
 ```Go
 var primes [] int
 ```
