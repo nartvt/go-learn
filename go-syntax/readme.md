@@ -14,7 +14,14 @@ khá ít nếu so với các ngôn ngữ khác như: Java(50 từ khóa), Python
 # Những cái cơ bản cần biết trong Go
 - Cú pháp Go đơn giản , dễ dàng cho người mới bắt đầu
 - Go không có OOP mà là functional
-- function main là duy nhất và nó chỉ nằm trong  package main
+- Hàm main là duy nhất và nó chỉ nằm trong  package main<br>
+```Go
+    // func <function name>(paremeter input ) <return type>{ // something }
+
+    func addNumber(number int) int{
+        return number*2
+    }
+```
 - Trong Go không sử dụng dấu chấm phẩy (;) khi kết thúc một dòng 
 - Khai báo kiểu dữ liệu trong Go, kiểu dữ liệu sẽ viết sau tên định danh<br>
 
