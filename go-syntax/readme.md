@@ -30,7 +30,7 @@ func main(){
     fmt.Println("Hello World")
 }
 ```
-import thư viện trong go có 2 cách
+import thư viện trong go có 2 cách<br>
 Cách 1, import riêng từng package
 ```Go
 package main
@@ -40,7 +40,7 @@ func main(){
       fmt.Println("Hello World - ", math.Sqrt(4))
 }
 ```
-Cách 2 - import các package lồn trong ngoặc tròn đơn 
+Cách 2 - import các package lồng trong ngoặc tròn đơn 
 ```Go
 package main
 import (
@@ -118,6 +118,11 @@ number:= 10 -- giá trị
     kiểu dữ liệu ngầm định(implicit type)
 ```
 ## Với kiểu dữ liệu cấu trúc(struct)
+sử dụng từ khóa 
+> <strong style="color:white">type</strong> <Tên định danh> <strong style="color:white">struct</strong>{
+    // thuộc tính 
+}
+
 ``` Go
 type User struct {
 	UserName string
