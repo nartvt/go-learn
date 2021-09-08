@@ -155,7 +155,7 @@ giải nén Goland file vừa tải bằng lệnh:
 <img src="images/18.png" style="display: block; margin-left: auto;margin-right: auto;"/>
 <br>
 
-Tạo desktop file cho Goland
+### Tạo desktop file cho Goland
 
 Trên terminal Di chuyển đến thư mục tạo desktop file 
 
@@ -195,7 +195,7 @@ sau khi save lại , tại cửa sổ terminal gõ lệnh
 
 để cập nhật thay đổi
 
-Tại Applications center của Ubuntu, chúng ta đã có Goland , kéo thả nó vào thanh bar để tiện truy cập khi cần dùng đến
+Tại Applications center của Ubuntu, chúng ta đã có Goland , kéo thả nó vào thanh dash để tiện truy cập khi cần dùng đến
 
 <img src="images/19.png" style="display: block; margin-left: auto;margin-right: auto;"/>
 <br>
