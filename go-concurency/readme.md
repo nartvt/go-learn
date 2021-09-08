@@ -11,9 +11,9 @@
 - Là việc nhiều thread chạy cùng 1 lúc và điều phối nhiều tác vụ trong 1 khoảng thời gian, có thể giải quyết nhiều tác vụ trong cùng 1 thời điểm
 - Không mất thời gian chuyển đổi tác vụ vì 1 tác vụ sẽ chạy từ đầu đến khi kết thúc mà không chuyển đổi hay dừng lại(trừ khi bị block bởi 1 tác vụ khác, như tranh chấp tài nguyên, block tiến trình bởi hệ điều hành .. )
 
-<img src="single_thread.png" />
+<img src="single_thread.png" style="width: 900px"/>
 
-<img src="con_para.jpg" />
+<img src="con_para.jpg" style="width: 900px"/>
 
 ## Tham khảo 
 1. https://devopedia.org/concurrency-vs-parallelism
